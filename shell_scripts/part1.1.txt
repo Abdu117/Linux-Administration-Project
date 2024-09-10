@@ -1,0 +1,11 @@
+Method 1: Add to /usr/local/bin
+Copy the Script to /usr/local/bin:
+Copy the userdef script to /usr/local/bin, which is a directory commonly included in the system’s PATH.
+
+Method 2: Add the script's Directory to PATH
+Add the Directory to Your PATH:
+Edit the shell configuration file ~/.bashrc
+add export PATH="$HOME/bin:$PATH"
+
+source ~/.bashrc
+This command re-applies the changes made to ~/.bashrc in the current terminal session, so you can start using userdef right away.

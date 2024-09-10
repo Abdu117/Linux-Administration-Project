@@ -1,0 +1,17 @@
+# Switch to the newly created user
+sudo su - "$NEW_USER"
+
+# Display all the files inside the extracted folder recursively and with long listing format
+ls -lR "$HOME_DIR/example_directory"
+
+# Change the owner of this directory recursively to be the new user
+sudo chown -R "$NEW_USER:$NEW_USER" "$HOME_DIR/example_directory"
+
+# Again, display all the files inside the extracted folder recursively and with long listing format
+ls -lR "$HOME_DIR/example_directory"
+
+# Search for the word "file" in the extracted directory recursively
+grep -r "file" "$HOME_DIR/example_directory"
+
+# Remove all the files ending with ".c"
+find "$HOME_DIR/example_directory" -type f -name "*.c" -exec rm {} +
